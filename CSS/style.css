@@ -98,4 +98,9 @@ header .navigation .navigation-items a{
     padding: 15px 35px;
     color: lightblue;
   }
+
+  form{
+    display: flex;
+    width: 10rem;
+  }
   
