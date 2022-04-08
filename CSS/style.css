@@ -99,8 +99,49 @@ header .navigation .navigation-items a{
     color: lightblue;
   }
 
-  form{
+
+
+  #questionnaire{
     display: flex;
-    width: 10rem;
+    justify-content: center;
+    width: max-content;
+    border: thin black solid;
+    margin:auto;
+    padding: 1rem;
   }
+
+  legend{
+    margin-bottom: 1rem;
+    background-color: rgb(20, 78, 150);
+    border: outset black 2px;
+    font-size: xx-large;
+  }
+
+  label {
+    display: inline;
+    margin-right: 10px;
+    font-size: xx-large;
+  }
+
+  #answer-one{
+    background-color: rgb(20, 78, 150);
+    border: outset black 2px;
+    margin-bottom: 1rem;
+  }
+
+  #answer-two{
+    background-color: rgb(20, 78, 150);
+    border: outset black 2px;
+  }
+
+  button{
+    display: block;
+    width: 75px;
+    height: 50px;
+    border: thin black outset;
+    margin-top: 1rem;
+    float: right;
+  
+  }
+  
   

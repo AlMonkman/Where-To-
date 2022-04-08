@@ -25,26 +25,24 @@
   </header>
 
   <section class="home">
-    <main>
-      <form id="addCity">
+    <main id="">
+      <form id="questionnaire">
         <fieldset>
-          <legend>City Store Information</legend>
-    
-          <label for="name">City name:</label>
-          <input id="name" type="text" name="cityName">
-    
-          <label for="minimum">Minimum customers per hour:</label>
-          <input id="minimum" type="text" name="minimum">
-    
-          <label for="maximum">Maximum customers per hour:</label>
-          <input id="maximum" type="text" name="maximum">
-    
-          <label for="average">Average cookies sold per hour:</label>
-          <input id="average" type="text" name="average">
-    
+          <legend>What sort of climate are you looking for?</legend>
+
+          <div id="answer-one">
+            <label for="Tropical">Tropical</label>
+            <input id="Tropical" type="checkbox" name="Tropical">
+          </div>
+
+          <div id="answer-two">
+            <label for="Frigid">Frigid</label>
+            <input id="Frigid" type="checkbox" name="minimum">
+          </div>
+          <button type="submit">Next</button>
         </fieldset>
-    
-        <button type="submit">Next</button>
+
+
       </form>
     </main>
   </section>
