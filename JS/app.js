@@ -39,3 +39,13 @@ console.log(destinationArray);
 // function generateNewQuestion() {
 //   document.getElementById()
 // }
+
+let resetForm = function() {
+  while (/*form exists*/) {
+    form.removeChild(form.firstChild);
+  } nextQuestion();
+};
+
+let nextQuestion = function() {
+  
+}
