@@ -10,6 +10,10 @@ let form = document.getElementById('questionnaire');
 
 let resultsDiv = document.getElementById('resultsDiv');
 
+let answerOneValue = document.getElementById('answerOneValue');
+
+let answerTwoValue = document.getElementById('answerTwoValue');
+
 let userAnswers = [];
 
 let questionsArray = ['What kind of budget are you working with for this trip?', 'How big of a group will you be traveling with?'];
@@ -50,10 +54,10 @@ function getAnswer() {
     }
   }
 }
-let buttonFunction = function(event) {
+let buttonFunction = function (event) {
   event.preventDefault();
-  generateNewQuestion();
   getAnswer();
+  generateNewQuestion();
   console.log(userAnswers);
 
 }
@@ -65,18 +69,23 @@ function generateNewQuestion() {
   question.textContent = `${questionsArray[i]}`;
   let answerOne = document.getElementById('answerOne');
   answerOne.textContent = `${answerArrayOne[i]}`;
+  answerOneValue.value = `${answerArrayOne[i]}`;
   let answerTwo = document.getElementById('answerTwo');
   answerTwo.textContent = `${answerArrayTwo[i]}`;
+  answerTwoValue.value = `${answerArrayTwo[i]}`;
   i++;
   console.log(i);
   if (i === 3) {
     form.style.display = 'none';
+    let anchor = document.createElement('a');
+    anchor.href = 'results.html';
+    resultsDiv.appendChild(anchor);
     let results = document.createElement('button');
     results.textContent = 'Click Here For Results!';
-    resultsDiv.appendChild(results);
+    anchor.appendChild(results);
   }
 
- 
-  
+
+
 }
 
