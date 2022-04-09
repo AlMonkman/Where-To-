@@ -7,8 +7,9 @@ let destinationArray;
 let userAnswers = [];
 //constructor function
 
-function Destination(name, climate, budget, size) {
+function Destination(name, climate, budget, size, fileExtension = 'jpg') {
   this.name = name;
+  this.src = `img/${name}.${fileExtension}`;
   this.climate = climate;
   this.budget = budget;
   this.size = size;
