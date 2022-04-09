@@ -3,7 +3,7 @@
 //global variables
 
 let destinationArray;
-// let questionnaire = document.getElementById(questionnaire);
+let form = document.getElementById('questionnaire');
 let userAnswers = [];
 //constructor function
 
@@ -15,37 +15,43 @@ function Destination(name, climate, budget, size) {
 }
 
 destinationArray = [
-  new Destination(),
-  new Destination(),
-  new Destination(),
-  new Destination(),
-  new Destination(),
-  new Destination(),
+  new Destination('Ha Long Bay, Vietnam', 'tropical', '', ''),
+  new Destination('Maldives', 'tropical', '', ''),
+  new Destination('Pink Lake, Australia', 'tropical', '', ''),
+  new Destination('Bora Bora', 'tropical', '', ''),
+  new Destination('Whistler, British Columbia', 'frigid', '', ''),
+  new Destination('Saariselka, Finland', 'frigid', '', ''),
+  new Destination('Harbin City, China', 'frigid', '', ''),
+  new Destination('Nagano, Japan', 'frigid', '', ''),
 ];
 
 console.log(destinationArray);
 
-// questionnaire.addEventListenter('submit' function(event) {
+function getAnswer() {
+  let answers = document.getElementsByName('action');
 
-//   event.preventDefault();
+  for (let i = 0; i < answers.length; i++) {
+    if (answers[i].checked) {
+      userAnswers.push(answers[i].value);
+    }
+  }
+}
 
-//   let form = event.target;
-//   let answer = form.answer;
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-//   userAnswers.push(answer);
-//   generateNewQuestion();
-// });
+  getAnswer();
+  console.log(userAnswers);
+
+});
 
 // function generateNewQuestion() {
 //   document.getElementById()
 // }
 
-let resetForm = function() {
-  while (/*form exists*/) {
-    form.removeChild(form.firstChild);
-  } nextQuestion();
-};
-
-let nextQuestion = function() {
-  
-}
+// let nextQuestion = function() {
+//   while (/*form exists*/) {
+//     form.removeChild(form.firstChild);
+//   } 
+//   nextQuestion();
+// };
