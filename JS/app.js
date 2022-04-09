@@ -2,28 +2,40 @@
 
 //global variables
 
-let destinationArray;
+let i = 0;
+
+let destinationArray = [];
+
 let form = document.getElementById('questionnaire');
+
 let userAnswers = [];
+
+let questionsArray = ['What kind of budget are you working with for this trip?', 'How big of a group will you be traveling with?'];
+
+let answerArrayOne = ['Affordable', 'Solo'];
+
+let answerArrayTwo = ['Expensive', 'Family'];
+
 //constructor function
 
 function Destination(name, climate, budget, size, fileExtension = 'jpg') {
   this.name = name;
-  this.src = `img/${name}.${fileExtension}`;
   this.climate = climate;
   this.budget = budget;
   this.size = size;
+  this.src = `img/${name}.${fileExtension}`;
+  destinationArray.push(this);
 }
 
 destinationArray = [
-  new Destination('Ha Long Bay, Vietnam', 'tropical', '', ''),
+  new Destination('Ha Long Bay', 'tropical', '', ''),
   new Destination('Maldives', 'tropical', '', ''),
-  new Destination('Pink Lake, Australia', 'tropical', '', ''),
+  new Destination('Pink Lake', 'tropical', '', ''),
   new Destination('Bora Bora', 'tropical', '', ''),
-  new Destination('Whistler, British Columbia', 'frigid', '', ''),
-  new Destination('Saariselka, Finland', 'frigid', '', ''),
-  new Destination('Harbin City, China', 'frigid', '', ''),
-  new Destination('Nagano, Japan', 'frigid', '', ''),
+  new Destination('Whistler', 'frigid', '', ''),
+  new Destination('Saariselka', 'frigid', '', ''),
+  new Destination('Harbin City', 'frigid', '', ''),
+  new Destination('Nagano', 'frigid', '', ''),
 ];
 
 console.log(destinationArray);
@@ -37,22 +49,29 @@ function getAnswer() {
     }
   }
 }
-
-form.addEventListener('submit', function(event) {
+let buttonFunction = function(event) {
   event.preventDefault();
-
+  generateNewQuestion();
   getAnswer();
   console.log(userAnswers);
 
-});
+}
 
-// function generateNewQuestion() {
-//   document.getElementById()
-// }
+form.addEventListener('submit', buttonFunction);
 
-// let nextQuestion = function() {
-//   while (/*form exists*/) {
-//     form.removeChild(form.firstChild);
-//   } 
-//   nextQuestion();
-// };
+function generateNewQuestion() {
+  let question = document.getElementById('Question');
+  question.textContent = `${questionsArray[i]}`;
+  let answerOne = document.getElementById('answerOne');
+  answerOne.textContent = `${answerArrayOne[i]}`;
+  let answerTwo = document.getElementById('answerTwo');
+  answerTwo.textContent = `${answerArrayTwo[i]}`;
+  i++;
+  console.log(i);
+  if (i === 3) {
+    form.style.display = 'none';
+  }
+ 
+  
+}
+
