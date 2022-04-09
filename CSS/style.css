@@ -48,7 +48,7 @@ header .navigation .navigation-items a{
   transition: 0.3s ease;
   }
   header .navigation .navigation-items a:before{
-    /* content: ''; */
+    content: '';
     position: absolute;
     background: #000;
     width: 0;
