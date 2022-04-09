@@ -103,16 +103,19 @@ header .navigation .navigation-items a{
   #questionnaire{
     display: flex;
     justify-content: center;
-    width: max-content;
-    border: thin black solid;
+    width: 75%;
+    border: 2rem gray outset;
+    border-radius: 6px;
+    background-image: url("../Img/tropical.jpg");
     margin:auto;
-    padding: 1rem;
+    padding: 3rem;
   }
 
   legend{
     margin-bottom: 1rem;
-    background-color: rgb(20, 78, 150);
+    background-color: #42B7FF;
     border: outset black 2px;
+    border-radius: 6px;
     font-size: xx-large;
   }
 
@@ -122,15 +125,22 @@ header .navigation .navigation-items a{
     font-size: xx-large;
   }
 
+  input{
+    width: 40px;
+    height: 20px;
+  }
+
   #answer-one{
     background-color: rgb(20, 78, 150);
     border: outset black 2px;
+    border-radius: 6px;
     margin-bottom: 1rem;
   }
 
   #answer-two{
     background-color: rgb(20, 78, 150);
     border: outset black 2px;
+    border-radius: 6px;
   }
 
   button{
@@ -138,6 +148,7 @@ header .navigation .navigation-items a{
     width: 75px;
     height: 50px;
     border: thin black outset;
+    border-radius: 6px;
     margin-top: 1rem;
     float: right;
   
