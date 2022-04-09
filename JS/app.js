@@ -4,9 +4,11 @@
 
 let i = 0;
 
-let destinationArray = [];
+let destinationArray;
 
 let form = document.getElementById('questionnaire');
+
+let resultsDiv = document.getElementById('resultsDiv');
 
 let userAnswers = [];
 
@@ -24,7 +26,6 @@ function Destination(name, climate, budget, size, fileExtension = 'jpg') {
   this.budget = budget;
   this.size = size;
   this.src = `img/${name}.${fileExtension}`;
-  destinationArray.push(this);
 }
 
 destinationArray = [
@@ -70,7 +71,11 @@ function generateNewQuestion() {
   console.log(i);
   if (i === 3) {
     form.style.display = 'none';
+    let results = document.createElement('button');
+    results.textContent = 'Click Here For Results!';
+    resultsDiv.appendChild(results);
   }
+
  
   
 }
