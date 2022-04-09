@@ -71,7 +71,7 @@ header .navigation .navigation-items a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: rgb(20, 78, 97);
+    /* background: rgb(20, 78, 97); */
   }
   .content{
     z-index: 888;
@@ -100,6 +100,15 @@ header .navigation .navigation-items a{
     font-weight: 500;
     text-decoration: none;
 
+  }
+  .home .video{
+    z-index: 000; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .home:before{ 
     z-index: 777; 
