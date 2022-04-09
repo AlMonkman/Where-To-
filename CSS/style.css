@@ -59,8 +59,7 @@ header .navigation .navigation-items a{
   
   }
   header .navigation .navigation-items a:hover:before{
-  
-    width: 100%;
+   width: 100%;
   }
   section{
     padding: 100px 200px;
