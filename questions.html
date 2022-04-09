@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Where To?</title>
   <link rel="stylesheet" href="CSS/reset.css">
-  <link rel="stylesheet" href="CSS/style.css">
+  <!-- <link rel="stylesheet" href="CSS/style.css"> -->
 
 </head>
 
@@ -31,17 +31,15 @@
           <legend>What sort of climate are you looking for?</legend>
 
           <div id="answer-one">
-            <input id="Tropical" type="checkbox" name="Tropical">
-            <label for="Tropical">Tropical</label>
+            <input id="Tropical" type="radio" name="action" value="Tropical">
+            <label for="Tropical">Tropical</label><br>
 
+          
+            <input id="Frigid" type="radio" name="action" value="Frigid">
+            <label for="Frigid">Frigid</label><br>
+
+            <button type="submit">Next</button>
           </div>
-
-          <div id="answer-two">
-            <input id="Frigid" type="checkbox" name="minimum">
-            <label for="Frigid">Frigid</label>
-
-          </div>
-          <button type="submit">Next</button>
         </fieldset>
 
 
