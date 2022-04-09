@@ -10,6 +10,8 @@ We are building a web-site that will help users in determining their next vacati
 
 ## Links and Resources
 
+- Google Images Creative Common Licenses
+
 - [Wireframe and Domain Modeling](https://luissandoval347505.invisionapp.com/freehand/where-to--S1kqcIVfN?dsid_h=95b89fb92de90c82d7c614c0435cec3d4c9e8e994be9757ba83982bf0523786e&uid_h=b37d24d46af7883943a5e33e5ab707378b54752222d4c1982d9e602d9897b30a)
 
 ## Reflections and Comments
