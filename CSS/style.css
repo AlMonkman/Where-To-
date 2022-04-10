@@ -32,6 +32,7 @@ header .brand{
   text-transform: uppercase;
   text-decoration: none;
   font-style: italic;
+  font-family: 'Bangers', cursive;
 
 }
 header .navigation{
@@ -71,7 +72,7 @@ header .navigation .navigation-items a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* background: rgb(20, 78, 97); */
+    background: rgb(20, 78, 97);
   }
   .content{
     z-index: 888;
