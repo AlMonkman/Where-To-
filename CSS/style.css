@@ -3,6 +3,10 @@
 }
 body{
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box
 }
 *{
   margin: 0;
@@ -42,7 +46,7 @@ header .navigation{
 header .navigation .navigation-items a{
   position: relative;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   margin-left: 30px;
@@ -73,11 +77,12 @@ header .navigation .navigation-items a{
     justify-content: center;
     flex-direction: column;
     background: rgb(20, 78, 97);
+  
   }
   .content{
     z-index: 888;
     color: white;
-    width: 70%;
+    width: 100%;
     margin-top: 50px;
   
   }
@@ -88,6 +93,7 @@ header .navigation .navigation-items a{
     letter-spacing: 5px;
     line-height: 75px;
     margin-bottom: 40px;
+    /* margin-left: 50px; */
   
   }
   .home .content p{
@@ -104,13 +110,14 @@ header .navigation .navigation-items a{
 
   }
   .home .video{
-    z-index: 000; 
-    position: absolute;
+    /* z-index: 000;  */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
   }
   .home:before{ 
     z-index: 777; 
@@ -131,6 +138,7 @@ header .navigation .navigation-items a{
   display: flex;
   flex-direction: column;
   transition: 0.5s ease;
+  float: right;
 }
 .home .media-icons a{
   color: white;
