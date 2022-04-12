@@ -22,8 +22,8 @@ h1, h2, h3, h4, h5, h6{
   font-style: italic;
   font-family: 'Bangers', cursive;
   vertical-align: top;
- 
-}
+ }
+
 navbar-nav{
   position: absolute;
   color: white;
@@ -35,6 +35,12 @@ navbar-nav{
   border-radius: 20px;
 
   }
+
+  ul.navbar-nav{
+    margin-top: 3rem;
+    margin-right: 2rem;
+  }
+
 a{
   text-decoration: none;
   text-align: center;
@@ -71,14 +77,12 @@ button{
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .text{ */
   font-weight: 400;
   opacity: 0.9;
   line-height: 1.6;
   letter-spacing: 1px;
 }
-
 .form-control{
   width: 100%;
   margin: 0.6rem 0;
@@ -157,10 +161,10 @@ img{
   display: flex;
   justify-content: center;
   width: 75%;
-  border: 2rem gray outset;
+  border: 1rem rgba(32, 67, 131, .7) outset;
   border-radius: 6px;
   background-image: url("../Img/tropical.jpg");
-  margin:auto;
+  margin: 2rem auto auto auto;
   padding: 3rem;
   
 }
@@ -171,6 +175,7 @@ legend{
   border: outset black 2px;
   border-radius: 6px;
   font-size: xx-large;
+  padding: 1rem;
 }
 
 label {
@@ -188,7 +193,6 @@ input{
   background-color: rgb(20, 78, 150);
   border: outset black 2px;
   border-radius: 6px;
-  margin-bottom: 1rem;
 }
 
 #answer-two{
@@ -197,15 +201,36 @@ input{
   border-radius: 6px;
 }
 
+#answers{
+  display: flex;
+  justify-content: center;
+}
+
 button{
   display: block;
-  width: 75px;
+  width: max-content;
   height: 50px;
   border: thin black outset;
   border-radius: 6px;
   margin-top: 1rem;
   float: right;
+  background-color: #42B7FF;
+  font-size: larger;
+}
 
+button:hover{
+  background-color: rgb(26, 221, 235);
+  transition: 0.7s;
+}
+
+#resultsDiv{
+display: flex;
+justify-content: center;
+}
+
+#resultsButton{
+  width: max-content;
+  background-color: #42B7FF;
 }
 
 
