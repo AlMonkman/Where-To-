@@ -1,271 +1,289 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TripBoss</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- font awesome cdn -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel = "stylesheet" href = "CSS/reset.css"> 
-        <link rel = "stylesheet" href = "CSS/questions.css">
-        
-    </head>
-    <body>
-        <nav class = "navbar">
-            <div class = "container flex">
-                <a href = "index.html" class = "site-brand">
-                    Where<span>To?</span>
-                </a> 
 
-                <button type = "button" id = "navbar-show-btn" class = "flex">
-                    <i class = "fas fa-bars"></i>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TripBoss</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/questions.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex">
+            <a href="index.html" class="site-brand">
+                Where<span>To?</span>
+            </a>
+
+            <button type="button" id="navbar-show-btn" class="flex">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="navbar-collapse">
+                <button type="button" id="navbar-close-btn" class="flex">
+                    <i class="fas fa-times"></i>
                 </button>
-                <div id = "navbar-collapse">
-                    <button type = "button" id = "navbar-close-btn" class = "flex">
-                        <i class = "fas fa-times"></i>
-                    </button>
-                    <ul class = "navbar-nav">
-                        <li class = "nav-item">
-                            <a href = "index.html" class = "nav-link">Home</a>
-                        </li>
-                       
-                        <li class = "nav-item">
-                            <a href = "aboutus.html" class = "nav-link">About</a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "contact.html" class = "nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="aboutus.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        
-        <header class = "flex">
-            <div class = "container">
-                <div class = "header-title">
-                    <h1>Where To Next?</h1>
-                    <p>Answer this following Question and we will recommend the best top destinations according to your answers.</p>
-                </div>
-                <div class = "header-form">
-                    <h2>Choose your Travel location:</h2>
-                    <form id="questionnaire">
-                      <fieldset>
+        </div>
+    </nav>
+
+    <header class="flex">
+        <div class="container">
+            <div class="header-title">
+                <h1>Where To Next?</h1>
+                <p>Answer this following Question and we will recommend the best top destinations according to your
+                    answers.</p>
+            </div>
+            <div class="header-form">
+                <h2>Choose your Travel location:</h2>
+                <form id="questionnaire">
+                    <fieldset>
                         <legend id="Question">What sort of climate are you looking for?</legend>
-              
+
                         <div>
-                          <input id="answerOneValue" type="radio" name="action" value="Tropical">
-                          <label id="answerOne" for="answerOneValue">Tropical</label><br>
-              
-                        
-                          <input id="answerTwoValue" type="radio" name="action" value="Frigid">
-                          <label id="answerTwo" for="answerTwoValue">Frigid</label><br>
-              
-                          <button type="submit">Next</button>
+                            <input id="answerOneValue" type="radio" name="action" value="Tropical">
+                            <label id="answerOne" for="answerOneValue">Tropical</label><br>
+
+
+                            <input id="answerTwoValue" type="radio" name="action" value="Frigid">
+                            <label id="answerTwo" for="answerTwoValue">Frigid</label><br>
+
+                            <button type="submit">Next</button>
                         </div>
-                      </fieldset>
-              
-              
-                    </form>
-                </div>
+                    </fieldset>
+
+
+                </form>
+                <div id="resultsDiv"></div>
             </div>
-        </header>
-        <!-- header -->
+        </div>
+    </header>
+    <!-- header -->
 
-        <!-- featured section -->
-        <section id = "featured" class = "py-4">
-            <div class = "container">
-                <div class = "title-wrap">
-                    <span class = "sm-title">know about some places before your travel</span>
-                    <h2 class = "lg-title">featured places</h2>
-                </div>
-
-                <div class = "featured-row">
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "Img/maldives.jpeg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Maldives, Asia
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "img/Ha Long Bay.jpg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Ha Long Bay, Vietnam
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "Img/cabin in finland.jpeg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Saariselka, finland
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "Img/sea2.jpg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Bora Bora, French Polynesia
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "Img/finland.jpeg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                             Saariselka, finland
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "featured-item my-2 shadow">
-                        <img src = "Img/pinklake2.jpg" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Pink Lake, Australia
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
-                        </div>
-                      </div>
-                </div>
+    <!-- featured section -->
+    <section id="featured" class="py-4">
+        <div class="container">
+            <div class="title-wrap">
+                <span class="sm-title">know about some places before your travel</span>
+                <h2 class="lg-title">featured places</h2>
             </div>
-        </section>
-        <!-- end of featured section -->
 
-        <!-- services section -->
-        <section id = "services" class = "offer">
-            <div class = "container">
-                <div class = "title-wrap">
-                    <span class = "sm-title">know about services that we offer</span>
-                    <h2 class = "services-logo">Our services</h2>
-                </div>
-
-                <div class = "services-row">
-                    <div class = "services-item">
-                        <span class = "services-icon">
-                            <i class = "fas fa-hotel"></i>
+            <div class="featured-row">
+                <div class="featured-item my-2 shadow">
+                    <img src="Img/maldives.jpeg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Maldives, Asia
                         </span>
-                        <h3>Luxurious Hotel</h3>
-                        <p class = "text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
-                        <a href = "#" class = "btn">Learn more</a>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class = "services-item">
-                        <span class = "services-icon">
-                            <i class = "fas fa-map-marked-alt"></i>
+                <div class="featured-item my-2 shadow">
+                    <img src="img/Ha Long Bay.jpg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Ha Long Bay, Vietnam
                         </span>
-                        <h3>Trave Guide</h3>
-                        <p class = "text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
-                        <a href = "#" class = "btn">Learn more</a>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class = "services-item">
-                        <span class = "services-icon">
-                            <i class = "fas fa-money-bill"></i>
+                <div class="featured-item my-2 shadow">
+                    <img src="Img/cabin in finland.jpeg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Saariselka, finland
                         </span>
-                        <h3>Suitable Price</h3>
-                        <p class = "text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
-                        <a href = "#" class = "btn">Learn more</a>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-item my-2 shadow">
+                    <img src="Img/sea2.jpg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bora Bora, French Polynesia
+                        </span>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-item my-2 shadow">
+                    <img src="Img/finland.jpeg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Saariselka, finland
+                        </span>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-item my-2 shadow">
+                    <img src="Img/pinklake2.jpg" alt="featured place">
+                    <div class="featured-item-content">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Pink Lake, Australia
+                        </span>
+                        <div>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed
+                                dignissimos libero soluta illum, harum amet excepturi sit?</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-       
-        <footer class = "py-4">
-            <div class = "container footer-row">
-                <div class = "footer-item">
-                    <a href = "index.html" class = "site-brand">
-                        Where<span>To?</span>
-                    </a>
-                    <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium reiciendis ipsa suscipit veritatis voluptate.</p>
+        </div>
+    </section>
+    <!-- end of featured section -->
+
+    <!-- services section -->
+    <section id="services" class="offer">
+        <div class="container">
+            <div class="title-wrap">
+                <span class="sm-title">know about services that we offer</span>
+                <h2 class="services-logo">Our services</h2>
+            </div>
+
+            <div class="services-row">
+                <div class="services-item">
+                    <span class="services-icon">
+                        <i class="fas fa-hotel"></i>
+                    </span>
+                    <h3>Luxurious Hotel</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat
+                        velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
 
-                <div class = "footer-item">
-                    <h2>Follow us on: </h2>
-                    <ul class = "social-links">
-                        <li>
-                            <a href = "#">
-                                <i class = "fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                                <i class = "fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                                <i class = "fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                                <i class = "fab fa-pinterest"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                                <i class = "fab fa-google-plus"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="services-item">
+                    <span class="services-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <h3>Trave Guide</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat
+                        velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
 
-                <div class = "footer-item">
-                    <h2>Popular Places:</h2>
-                    <ul>
-                        <li><a href = "#">Thailand</a></li>
-                        <li><a href = "#">Australia</a></li>
-                        <li><a href = "#">Maldives</a></li>
-                        <li><a href = "#">Iceland</a></li>
-                        <li><a href = "#">Pink Lake</a></li>
-                    </ul>
-                </div>
-
-                <div class = "subscribe-form footer-item">
-                    <h2>Subscribe for Newsletter!</h2>
-                    <form class = "flex">
-                        <input type = "email" placeholder="Enter Email" class = "form-control">
-                        <button type="submit">Submit</button>
-                    </form>
+                <div class="services-item">
+                    <span class="services-icon">
+                        <i class="fas fa-money-bill"></i>
+                    </span>
+                    <h3>Suitable Price</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo, totam repellat
+                        velit, dignissimos sequi error a minima architecto fugit nisi dolorum repellendus?</p>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
             </div>
-        </footer>
-        <script src = "JS/app.js"></script>
-        <script>
-          
-        </script>
-    </body>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container footer-row">
+            <div class="footer-item">
+                <a href="index.html" class="site-brand">
+                    Where<span>To?</span>
+                </a>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam
+                    vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium
+                    reiciendis ipsa suscipit veritatis voluptate.</p>
+            </div>
+
+            <div class="footer-item">
+                <h2>Follow us on: </h2>
+                <ul class="social-links">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <h2>Popular Places:</h2>
+                <ul>
+                    <li><a href="#">Thailand</a></li>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">Maldives</a></li>
+                    <li><a href="#">Iceland</a></li>
+                    <li><a href="#">Pink Lake</a></li>
+                </ul>
+            </div>
+
+            <div class="subscribe-form footer-item">
+                <h2>Subscribe for Newsletter!</h2>
+                <form class="flex">
+                    <input type="email" placeholder="Enter Email" class="form-control">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/app.js"></script>
+    <script>
+
+    </script>
+</body>
+
 </html>
