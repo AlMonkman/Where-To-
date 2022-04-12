@@ -90,6 +90,7 @@ function generateNewQuestion() {
     resultsDiv.appendChild(anchor);
     let results = document.createElement('button');
     results.textContent = 'Click Here For Results!';
+    results.setAttribute('id', 'resultsButton');
     anchor.appendChild(results);
     localStorage.setItem('userData', JSON.stringify(userAnswers));
   }
