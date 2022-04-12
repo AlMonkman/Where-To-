@@ -44,7 +44,7 @@ destinationArray = [
   new Destination('Whistler', 'Frigid', 'Expensive', 'Family'),
   new Destination('Saariselka', 'Frigid', 'Expensive', 'Solo'),
   new Destination('Harbin City', 'Frigid', 'Affordable', 'Family'),
-  new Destination('Nagano', 'Frigid', 'Afforbale', 'Solo')
+  new Destination('Nagano', 'Frigid', 'Affordable', 'Solo')
 ];
 
 console.log(destinationArray);
