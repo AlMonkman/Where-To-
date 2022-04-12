@@ -71,12 +71,14 @@ button{
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 .text{ */
   font-weight: 400;
   opacity: 0.9;
   line-height: 1.6;
   letter-spacing: 1px;
 }
+
 .form-control{
   width: 100%;
   margin: 0.6rem 0;
@@ -329,4 +331,8 @@ button{
   .featured-row, .services-row{
       grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.text {
+  margin-top: 1rem;
 }
