@@ -120,4 +120,6 @@ h1 {
 .content a {
   font-size: 1.3rem;
   display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
