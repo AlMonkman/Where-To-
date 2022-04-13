@@ -121,7 +121,7 @@ function showResults() {
       && userAnswers[1] === destinationArray[i].budget
       && userAnswers[2] === destinationArray[i].size) {
       let h1 = document.createElement('h1');
-      h1.textContent = `${destinationArray[i].name} is your top Where To? destination!`;
+      h1.textContent = `${destinationArray[i].name}`;
       resultsPage.appendChild(h1);
       let img = document.createElement('img');
       img.src = destinationArray[i].src;
