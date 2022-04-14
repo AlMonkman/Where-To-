@@ -16,6 +16,8 @@ We are building a web-site that will help users in determining their next vacati
 
 ## Reflections and Comments
 
+This project was very enjoyable for the entire team. Our group complimented eachother well with our strengths and weaknesses. One of the best things about working in a group was the ability to easily solve problems by just asking your partners. One of the most difficult aspects was working with Git as a group, specifically avoiding merge conflicts.
+
 ## User Story 1
 
 As a user, I want to be able to quickly find a travel destination.
