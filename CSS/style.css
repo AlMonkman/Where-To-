@@ -93,7 +93,6 @@ header .navigation .navigation-items a{
     letter-spacing: 5px;
     line-height: 75px;
     margin-bottom: 40px;
-    /* margin-left: 50px; */
   
   }
   .home .content p{
@@ -110,7 +109,6 @@ header .navigation .navigation-items a{
 
   }
   .home .video{
-    /* z-index: 000;  */
     position: fixed;
     top: 0;
     left: 0;
@@ -123,7 +121,6 @@ header .navigation .navigation-items a{
     z-index: 777; 
    content: '';
    position: absolute;
-   /* background: rgba(3,96,251,0.2);  */
    width: 100%; 
    height: 100%;
    top: 0;
@@ -158,61 +155,4 @@ header .navigation .navigation-items a{
  }
  
 
-
-
-  /* #questionnaire{
-    display: flex;
-    justify-content: center;
-    width: 75%;
-    border: 2rem gray outset;
-    border-radius: 6px;
-   background-image: url("../Img/tropical.jpg");
-    margin:auto;
-    padding: 3rem;
-    
-  }
-
-  legend{
-    margin-bottom: 1rem;
-    background-color: #42B7FF;
-    border: outset black 2px;
-    border-radius: 6px;
-    font-size: xx-large;
-  }
-
-  label {
-    display: inline;
-    margin-right: 10px;
-    font-size: xx-large;
-  }
-
-  input{
-    width: 40px;
-    height: 20px;
-  }
-
-  #answer-one{
-    background-color: rgb(20, 78, 150);
-    border: outset black 2px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-
-  #answer-two{
-    background-color: rgb(20, 78, 150);
-    border: outset black 2px;
-    border-radius: 6px;
-  }
-
-  button{
-    display: block;
-    width: 75px;
-    height: 50px;
-    border: thin black outset;
-    border-radius: 6px;
-    margin-top: 1rem;
-    float: right;
-  
-  }
-   */
   
